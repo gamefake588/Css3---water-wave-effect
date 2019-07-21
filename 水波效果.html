@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水波效果</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* transition: all 1s; */
+        }
+        
+        body {
+            height: 100vh;
+            background-color: #2c2c2c;
+        }
+        
+        .item {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid #fff;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .item-waves {
+            width: 300px;
+            height: 300px;
+            background-color: rgba(0, 152, 255, 0.5);
+            position: absolute;
+            border-radius: 100px;
+            animation: waves infinite;
+            left: -5vw;
+        }
+        
+        .waves1 {
+            top: 14vh;
+            animation-duration: 5s;
+            /* transform: rotate(5deg); */
+        }
+        
+        .waves2 {
+            top: 12vh;
+            background-color: rgba(54, 151, 217, 0.5);
+            animation-duration: 6s;
+        }
+        
+        .waves3 {
+            top: 10vh;
+            background-color: rgba(121, 183, 225, 0.5);
+            animation-duration: 7s;
+        }
+        
+        @keyframes waves {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="item">
+        <section class="item-waves waves1"></section>
+        <section class="item-waves waves2"></section>
+        <section class="item-waves waves3"></section>
+    </div>
+
+</body>
+
+</html>
